@@ -26,11 +26,11 @@ import java.util.List;
 
 public class DirectionFinder {
     private static final String DIRECTION_URL = "https://maps.googleapis.com/maps/api/directions/json?";
-    private static final String GOOGLE_API_KEY = "AIzaSyA_kjM7nFNLKtrCSsyhNp3dbfoN2J0eeMQ";
+    private static final String GOOGLE_API_KEY = "****************************";
 
-    //**************API地址********** google direction url地址不变    api 为自己的api_key
-
-    private DirectionFinderListener listener;           // 这个为MapsActivity 里面  DirectionFinder 里面的this
+    // API address from google map api key
+    
+    private DirectionFinderListener listener;           
 
     private String origin;
     private String destination;
@@ -40,7 +40,7 @@ public class DirectionFinder {
         this.origin = origin;
         this.destination = destination;
     }
-        //***************************DirectonFinder的instructor*******************
+        //***************************DirectonFinder's instructor*******************
 
     public void execute() throws UnsupportedEncodingException {
         listener.onDirectionFinderStart();
@@ -48,6 +48,7 @@ public class DirectionFinder {
     }
 
 
+    // create api url 
 
     private String createUrl() throws UnsupportedEncodingException {
 
@@ -59,7 +60,7 @@ public class DirectionFinder {
 
 
     }
-         //*********************生产Request 连接的方法
+         
 
 
     private class DownloadRawData extends AsyncTask<String, Void, String> {
